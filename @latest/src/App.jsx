@@ -1,5 +1,6 @@
 import "./App.css";
 import { Banner } from "./components/Banner";
+import { EventCard } from "./components/EventCard";
 import { EventForm } from "./components/EventForm";
 import { Theme } from "./components/Theme";
 function App() {
@@ -29,6 +30,16 @@ function App() {
       name: "cloud",
     },
   ];
+  const events = [
+    {
+      cover:
+        "https://i.pinimg.com/736x/f3/b1/77/f3b177f3e7978e29bdf1a9657ab5ad10.jpg",
+      theme: themes[0],
+      date: new Date(),
+      title: "title",
+    },
+  ];
+
   return (
     <main>
       <header>
@@ -36,24 +47,14 @@ function App() {
       </header>
       <Banner />
       <EventForm />
-      <section>
-        <Theme theme={themes[0]}></Theme>
-      </section>
-      <section>
-        <Theme theme={themes[1]}></Theme>
-      </section>
-      <section>
-        <Theme theme={themes[2]}></Theme>
-      </section>
-      <section>
-        <Theme theme={themes[3]}></Theme>
-      </section>
-      <section>
-        <Theme theme={themes[4]}></Theme>
-      </section>
-      <section>
-        <Theme theme={themes[5]}></Theme>
-      </section>
+      {themes.map(function (item) {
+        return (
+          <section key={item.id}>
+            <Theme theme={item} />
+            <EventCard event={events[0]}></EventCard>
+          </section>
+        );
+      })}
     </main>
   );
 }
