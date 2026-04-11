@@ -1,3 +1,4 @@
+import "./form-field.styles.css";
 export function FormField({ children }) {
-  return <fieldset>{children}</fieldset>;
+  return <fieldset className="form-field">{children}</fieldset>;
 }

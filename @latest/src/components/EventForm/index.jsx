@@ -8,10 +8,21 @@ export function EventForm() {
   return (
     <form className="form-event">
       <FormTitle>Preencha para criar um evento</FormTitle>
-      <FormField>
-        <Label htmlFor="none">Qual o nome do evento</Label>
-        <Input type="text" id="none" placeholder="Summer dev hits" />
-      </FormField>
+      <div className="form-fields">
+        <FormField>
+          <Label htmlFor="eventName">Qual o nome do evento</Label>
+          <Input
+            type="text"
+            id="eventName"
+            placeholder="Summer dev hits"
+            name="eventName"
+          />
+        </FormField>
+        <FormField>
+          <Label htmlFor="eventDate">Data do evento</Label>
+          <Input type="date" id="eventDate" />
+        </FormField>
+      </div>
     </form>
   );
 }
