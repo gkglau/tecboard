@@ -1,4 +1,8 @@
 import "./select.styles.css";
-export function Select(props) {
-  return <select {...props}>{props.children}</select>;
+export function Select() {
+  return (
+    <select className="select">
+      <option></option>
+    </select>
+  );
 }

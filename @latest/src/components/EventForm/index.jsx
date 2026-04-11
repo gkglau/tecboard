@@ -25,7 +25,9 @@ export function EventForm() {
           <Input type="date" id="eventDate" />
         </FormField>
         <Select></Select>
-        <Button></Button>
+        <div className="actions">
+          <Button>Criar Evento</Button>
+        </div>
       </div>
     </form>
   );
