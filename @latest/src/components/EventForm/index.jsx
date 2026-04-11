@@ -3,6 +3,8 @@ import { FormField } from "../FormField";
 import { FormTitle } from "../FormTitle";
 import { Input } from "../Input";
 import { Label } from "../Label";
+import { Select } from "../Select";
+import { Button } from "../Button";
 
 export function EventForm() {
   return (
@@ -22,6 +24,8 @@ export function EventForm() {
           <Label htmlFor="eventDate">Data do evento</Label>
           <Input type="date" id="eventDate" />
         </FormField>
+        <Select></Select>
+        <Button></Button>
       </div>
     </form>
   );
