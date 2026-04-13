@@ -38,6 +38,13 @@ function App() {
       date: new Date(),
       title: "title",
     },
+    {
+      cover:
+        "https://i.pinimg.com/736x/f3/b1/77/f3b177f3e7978e29bdf1a9657ab5ad10.jpg",
+      theme: themes[0],
+      date: new Date(),
+      title: "title",
+    },
   ];
 
   return (
@@ -46,7 +53,7 @@ function App() {
         <img src="/logo.png" />
       </header>
       <Banner />
-      <EventForm />
+      <EventForm themes={themes} />
       {themes.map(function (item) {
         return (
           <section key={item.id}>

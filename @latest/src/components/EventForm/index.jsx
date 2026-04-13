@@ -6,7 +6,7 @@ import { Label } from "../Label";
 import { Select } from "../Select";
 import { Button } from "../Button";
 
-export function EventForm() {
+export function EventForm({ themes }) {
   return (
     <form className="form-event">
       <FormTitle>Preencha para criar um evento</FormTitle>
@@ -24,7 +24,10 @@ export function EventForm() {
           <Label htmlFor="eventDate">Data do evento</Label>
           <Input type="date" id="eventDate" />
         </FormField>
-        <Select></Select>
+        <FormField>
+          <Label htmlFor="theme">Tema do evento</Label>
+          <Select id="theme" name="theme" items={themes}></Select>
+        </FormField>
         <div className="actions">
           <Button>Criar Evento</Button>
         </div>
