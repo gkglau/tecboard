@@ -1,7 +1,7 @@
 import "./select.styles.css";
-export function Select({ items }) {
+export function Select({ items, ...rest }) {
   return (
-    <select className="select" defaultValue="">
+    <select {...rest} className="select" defaultValue="">
       <option value="" disabled>
         Selecione uma opção
       </option>

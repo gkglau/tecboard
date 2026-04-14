@@ -6,9 +6,20 @@ import { Label } from "../Label";
 import { Select } from "../Select";
 import { Button } from "../Button";
 
-export function EventForm({ themes }) {
+export function EventForm({ themes, onSubmit }) {
+  function handleSubmit(formData) {
+    const event = {
+      cover: "http://localhost:5173/public/01_cover.png",
+      theme: themes.find(function (item) {
+        return item.id == formData.get("theme");
+      }),
+      date: new Date(formData.get("eventDate")),
+      title: formData.get("eventName"),
+    };
+    onSubmit(event);
+  }
   return (
-    <form className="form-event">
+    <form className="form-event" action={handleSubmit}>
       <FormTitle>Preencha para criar um evento</FormTitle>
       <div className="form-fields">
         <FormField>

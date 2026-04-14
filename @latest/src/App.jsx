@@ -3,6 +3,8 @@ import { Banner } from "./components/Banner";
 import { EventCard } from "./components/EventCard";
 import { EventForm } from "./components/EventForm";
 import { Theme } from "./components/Theme";
+import { useState } from "react";
+
 function App() {
   const themes = [
     {
@@ -30,22 +32,19 @@ function App() {
       name: "cloud",
     },
   ];
-  const events = [
+
+  const [events, setEvent] = useState([
     {
-      cover:
-        "https://i.pinimg.com/736x/f3/b1/77/f3b177f3e7978e29bdf1a9657ab5ad10.jpg",
+      cover: "http://localhost:5173/public/01_cover.png",
       theme: themes[0],
       date: new Date(),
-      title: "title",
+      title: "title 1",
     },
-    {
-      cover:
-        "https://i.pinimg.com/736x/f3/b1/77/f3b177f3e7978e29bdf1a9657ab5ad10.jpg",
-      theme: themes[0],
-      date: new Date(),
-      title: "title",
-    },
-  ];
+  ]);
+
+  function addEvent(event) {
+    setEvent([...events, event]);
+  }
 
   return (
     <main>
@@ -53,15 +52,21 @@ function App() {
         <img src="/logo.png" />
       </header>
       <Banner />
-      <EventForm themes={themes} />
-      {themes.map(function (item) {
-        return (
-          <section key={item.id}>
-            <Theme theme={item} />
-            <EventCard event={events[0]}></EventCard>
-          </section>
-        );
-      })}
+      <EventForm themes={themes} onSubmit={addEvent} />
+      <section className="container">
+        {themes.map(function (item) {
+          return (
+            <section key={item.id}>
+              <Theme theme={item} />
+              <div className="events">
+                {events.map(function (item, index) {
+                  return <EventCard event={item} key={index} />;
+                })}
+              </div>
+            </section>
+          );
+        })}
+      </section>
     </main>
   );
 }
