@@ -35,7 +35,8 @@ function App() {
 
   const [events, setEvent] = useState([
     {
-      cover: "./public/01_cover.png",
+      cover:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAG57MrhEcxHmzpnrtAOUgjOyiQRY-uRDOlw&s",
       theme: themes[0],
       date: new Date(),
       title: "title 1",
