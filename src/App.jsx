@@ -39,7 +39,7 @@ function App() {
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAG57MrhEcxHmzpnrtAOUgjOyiQRY-uRDOlw&s",
       theme: themes[0],
       date: new Date(),
-      title: "title 1",
+      title: "Frontend Skills",
     },
   ]);
 
