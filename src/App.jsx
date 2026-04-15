@@ -35,7 +35,7 @@ function App() {
 
   const [events, setEvent] = useState([
     {
-      cover: "http://localhost:5173/public/01_cover.png",
+      cover: "./public/01_cover.png",
       theme: themes[0],
       date: new Date(),
       title: "title 1",
