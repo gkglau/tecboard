@@ -1,16 +1,34 @@
-# React + Vite
+## 🚀 Tecboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Your technology event hub!**
 
-Currently, two official plugins are available:
+This project was built with React and aims to facilitate the creation and visualization of events focused on topics such as Front-end, Back-end, Cloud, and much more.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+🔗 [See here](https://tecboard-eight-azure.vercel.app/)
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🔨 Project Features
 
-## Expanding the ESLint configuration
+- Creation of custom events with image, title, date, and theme  
+- Organization of events by theme  
+- Data persistence in memory (local React state)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🖼️ Project Screenshot
+
+
+<img width="3456" height="3524" alt="image" src="https://github.com/user-attachments/assets/fd8cfdc4-41a4-4b12-a808-9e3290ccb78e" />
+
+
+---
+
+## ✔️ Techniques and Technologies Used
+
+- **React + Vite**: Lightweight framework for React development  
+- **useState**: For managing the local state of events  
+- **Componentization**: Clear separation of responsibilities by component  
+- **Forms with FormData**: Structured data capture  
+- **CSS Modules**: Styles organized by component with local scope  
+- **Google Fonts (Work Sans + Orbitron)**: Custom typography
